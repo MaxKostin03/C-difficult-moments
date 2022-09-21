@@ -113,11 +113,11 @@ void Task2()
 //--------------------------------2------------------------------
 
 template<typename T>
-class MyIt
+class Iterator
 {
 public:
-	MyIt() {};
-	MyIt(T& val) { ptr = &val; };
+	Iterator() {};
+	Iterator(T& val) { ptr = &val; };
 
 	void operator=(T val) { *ptr = val; }
 	T operator*() { return *ptr; }
@@ -130,7 +130,7 @@ private:
 void Task3() 
 {
 	int Arr[5] = { 0, 5, 7, 9, 10 };
-	MyIt it = *end(Arr);
+	Iterator it = *end(Arr);
 	--it;
 	cout << *it << " ";
 	--it;
